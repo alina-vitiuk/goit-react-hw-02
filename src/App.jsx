@@ -7,7 +7,7 @@ import css from "./App.module.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  const typeRewiews = {
+  const rewiews = {
     good: 0,
     neutral: 0,
     bad: 0,
@@ -18,7 +18,7 @@ function App() {
     if (savedValues !== null) {
       return JSON.parse(savedValues);
     }
-    return typeRewiews;
+    return rewiews;
   });
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function App() {
     });
   };
 
-  const resetFeedbackButton = () => setValues(typeRewiews);
+  const resetFeedbackButton = () => setValues(rewiews);
 
   return (
     <section className={css.container}>
